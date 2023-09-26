@@ -1,9 +1,7 @@
-name: zapfull-security-scan
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  schedule:
+    # Runs every day At 01:00.
+    - cron:  '0 1 * * *'
 
 jobs:
   zap_scan:
