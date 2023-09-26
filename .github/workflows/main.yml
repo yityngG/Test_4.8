@@ -6,10 +6,11 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  zap_scan:
     runs-on: ubuntu-latest
-    steps:     
-    - name: OWASP ZAP Full Scan
-      uses: zaproxy/action-full-scan@v0.1.0
-      with:
-        target: "https://techconnectweb.azurewebsites.net/"
+    name: Scan ZAP website
+    steps:
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.1.0
+        with:
+          target: 'https://www.zaproxy.org/'
