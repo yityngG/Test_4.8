@@ -19,10 +19,5 @@ permissions:
       issues: write
       # To create NPM packages in GitHub
       packages: write
-      
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:     
-    - name: OWASP ZAP Full Scan
-      uses: zaproxy/action-full-scan@v0.1.0
+
+
